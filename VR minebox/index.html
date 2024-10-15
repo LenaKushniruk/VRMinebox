@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minebox</title>
+    <script src="./js/aframe.min.js"></script>
+    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h2>Wood: <span id="js--wood">0</span></h2>
+    <h2>Stone: <span id="js--stone">0</span></h2>
+    <a-scene>
+        <a-camera>
+            <a-cursor color="black">
+                <a-box id="js--item--grabbed" width="0.5" height="0.5" depth="0.5" color="red" position="1 0 0"></a-box>
+                <a-cone id="js--pickaxe--grabbed" color="green" position="1.5 0 -1" rotation="-50 0 0" height="3"></a-cone>
+                <a-cone id="js--pickaxe--grabbed2" color="grey" position="1.5 0 -1" rotation="-50 0 0" height="3"></a-cone>
+            </a-cursor>
+        </a-camera>
+        <a-box id="js--item" width="1" height="1" depth="1" color="red" position="0 1 -2"></a-box>
+        <a-sphere class="js--sphere" color="yellow" position="-2 -0.5 5"></a-sphere>
+        <a-sphere class="js--sphere" color="yellow" position="0 -0.5 5"></a-sphere>
+        <a-sphere class="js--sphere" color="yellow" position="2 -0.5 5"></a-sphere>
+        <a-plane width="50" height="50" color="#EDC6B1" position="0 0 0" rotation="-90 0 0"></a-plane>
+
+        <!--Tree-->
+        <a-box class="js--tree" color="brown" position="6 0.5 0"></a-box>
+        <a-box class="js--tree" color="brown" position="6 1.5 0"></a-box>
+        <a-box class="js--tree" color="brown" position="6 2.5 0"></a-box>
+        <a-box class="js--tree" color="brown" position="6 3.5 0"></a-box>
+
+        <a-box class="js--tree" color="green" position="6 4.5 0"></a-box>
+        <a-box class="js--tree" color="green" position="6 4.5 1"></a-box>
+        <a-box class="js--tree" color="green" position="6 4.5 -1"></a-box>
+
+        <a-box class="js--tree" color="green" position="6 5.5 0.5"></a-box>
+        <a-box class="js--tree" color="green" position="6 5.5 -0.5"></a-box>
+
+        <a-box class="js--tree" color="green" position="6 6.5 0"></a-box>
+
+        <!--castle-->
+        <a-box class="js--castle" color="grey" position="-4 0.5 -7" ></a-box>
+        <a-box class="js--castle" color="grey" position="-4 1.5 -7" ></a-box>
+        <a-box class="js--castle" color="grey" position="-3 2.5 -7" ></a-box>
+        <a-box class="js--castle" color="grey" position="-3 0.5 -7" ></a-box>
+        <a-box class="js--castle" color="grey" position="-3 1.5 -7" ></a-box>
+        <a-box class="js--castle" color="grey" position="-3 2.5 -7" ></a-box>
+        <a-box class="js--castle" color="grey" position="-5 2.5 -7" ></a-box>
+        <a-box class="js--castle" color="grey" position="-5 0.5 -7" ></a-box>
+        <a-box class="js--castle" color="grey" position="-5 1.5 -7" ></a-box>
+        <a-box class="js--castle" color="grey" position="-5 2.5 -7" ></a-box>
+        <a-box class="js--castle" color="grey" position="-3 0.5 -6" ></a-box>
+        <a-box class="js--castle" color="grey" position="-3 1.5 -6" ></a-box>
+        <a-box class="js--castle" color="grey" position="-3 1.5 -6" ></a-box>
+        <a-box class="js--castle" color="grey" position="-3 0.5 -5" ></a-box>
+        <a-box class="js--castle" color="grey" position="-3 1.5 -5" ></a-box>
+        <a-box class="js--castle" color="grey" position="-3 2.5 -5" ></a-box>
+        <a-box class="js--castle" color="grey" position="-5 0.5 -6" ></a-box>
+        <a-box class="js--castle" color="grey" position="-5 1.5 -6" ></a-box>
+        <a-box class="js--castle" color="grey" position="-5 0.5 -5" ></a-box>
+        <a-box class="js--castle" color="grey" position="-5 1.5 -5" ></a-box>
+        <a-box class="js--castle" color="grey" position="-5 2.5 -5" ></a-box>
+        <a-box class="js--castle" color="grey" position="-4 1.5 -5" ></a-box>
+        <a-box class="js--castle" color="grey" position="-4 0.5 -5" ></a-box>
+
+
+
+        <!--pickaxe-->
+        <a-cone id="js--pickaxe" color="green" position="-8 0.5 0" height="3"></a-cone>
+
+        <!--pickaxe2-->
+        <a-cone id="js--pickaxe-stone" color="grey" position="-8 0.5 2" height="3"></a-cone>
+        
+        <!--invisible boxes-->
+        <a-box id="js--invisible-boxes" visible="false" color="red" width="1" height="1" depth="1"></a-box>
+    </a-scene>
+</body>
+</html>
